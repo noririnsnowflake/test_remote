@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ú×‰æ–Ê</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Ú×</h1>
+<br>
+<div th:object="${registForm}">
+<table>
+	<tbody>
+ 		<tr>
+			<th>“®•¨‚Ì–¼‘O</th>
+		    <td>
+		    	<p th:text="*{animal}"></p>
+		    </td>
+		</tr>
+		<tr>
+		    <th>“Á’¥</th>
+		    <td>
+		    	<p th:text="*{features}"></p>
+		    </td>
+		</tr>
+
+		<tr>
+		    <th>¶‘§’n</th>
+		    <td>
+		    	<p th:text="*{habitat}"></p>
+		    </td>
+		</tr>
+	</tbody>
+</table>
+
+<form action="#" th:action="@{/edit}" method="POST">
+	<input type = "hidden" name="animal" th:value="*{animal}">
+	<input type = "hidden" name="features" th:value="*{features}">
+	<input type = "hidden" name="habitat" th:value="*{habitat}">
+	<input type="submit" value="•ÒW‚·‚é">
+</form>
+
+</div>
+</body>
+</html>
